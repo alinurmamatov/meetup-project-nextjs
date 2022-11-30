@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useRef } from "react";
 import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
@@ -9,7 +8,6 @@ const NewMeetupForm = (props) => {
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
-  const router = useRouter();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -26,7 +24,6 @@ const NewMeetupForm = (props) => {
     };
 
     onAddMeetup(meetupData);
-    router.push("/");
   };
 
   return (
